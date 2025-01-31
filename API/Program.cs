@@ -26,7 +26,7 @@ builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(List.
 builder.Services.AddAutoMapper(typeof(List.Handler).Assembly);
 */
 builder.Services.AddApplicationServices(builder.Configuration);
-var app = builder.Build();
+var app = builder.Build();  
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
