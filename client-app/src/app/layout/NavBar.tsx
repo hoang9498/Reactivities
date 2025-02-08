@@ -1,6 +1,9 @@
 import {Button, Container, Menu} from "semantic-ui-react";
+interface Props {
+    openForm: () => void;
+}
 
-export default function NavBar() {
+export default function NavBar({ openForm }: Props) {
     return (
             <Menu inverted fixed="top" style={{ height: '50px', lineHeight: '50px' }}>
                 <Container
@@ -16,7 +19,7 @@ export default function NavBar() {
                     </Menu.Item>
                     <Menu.Item name="Activities" style={{ padding: '5px 10px' }} />
                     <Menu.Item style={{ padding: '5px 10px' }}>
-                        <Button positive content="Create Activity" style={{ padding: '5px 10px' }} />
+                        <Button onClick={openForm} positive content="Create Activity" style={{ padding: '5px 10px' }} />
                     </Menu.Item>
                 </Container>
             </Menu>
